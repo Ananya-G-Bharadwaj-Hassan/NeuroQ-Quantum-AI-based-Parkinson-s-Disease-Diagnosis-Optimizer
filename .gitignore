@@ -1,4 +1,4 @@
-.env
+.env.example
 instance/
 instance/secret.key
 instance/doctors.db
