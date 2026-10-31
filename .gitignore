@@ -1,0 +1,6 @@
+.env
+instance/
+instance/secret.key
+instance/doctors.db
+__pycache__/
+venv/

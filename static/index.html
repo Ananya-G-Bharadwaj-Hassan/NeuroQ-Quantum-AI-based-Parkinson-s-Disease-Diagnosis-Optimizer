@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NeuroQ · Parkinson's Diagnosis Assist</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+<!-- ============ LOGIN / REGISTER SCREEN ============ -->
+<div id="view-login" class="login-shell">
+  <div class="login-hero">
+    <svg class="qubit-field" viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#1d3a5a" stroke-width="1">
+        <line x1="60" y1="120" x2="220" y2="200"/>
+        <line x1="220" y1="200" x2="180" y2="360"/>
+        <line x1="220" y1="200" x2="400" y2="150"/>
+        <line x1="180" y1="360" x2="340" y2="420"/>
+        <line x1="400" y1="150" x2="520" y2="260"/>
+        <line x1="340" y1="420" x2="480" y2="480"/>
+        <line x1="480" y1="480" x2="420" y2="620"/>
+        <line x1="180" y1="360" x2="80" y2="500"/>
+        <line x1="80" y1="500" x2="200" y2="620"/>
+        <line x1="200" y1="620" x2="420" y2="620"/>
+        <line x1="520" y1="260" x2="480" y2="480"/>
+      </g>
+      <g fill="#4fd8c4" opacity="0.85">
+        <circle cx="60" cy="120" r="4"/>
+        <circle cx="220" cy="200" r="5"/>
+        <circle cx="400" cy="150" r="4"/>
+        <circle cx="180" cy="360" r="5"/>
+        <circle cx="520" cy="260" r="4"/>
+        <circle cx="340" cy="420" r="5"/>
+        <circle cx="80" cy="500" r="4"/>
+        <circle cx="480" cy="480" r="5"/>
+        <circle cx="200" cy="620" r="4"/>
+        <circle cx="420" cy="620" r="5"/>
+      </g>
+    </svg>
+    <div class="hero-content">
+      <div class="brand-mark"><span class="dot"></span>NeuroQ Diagnostics</div>
+      <h1>Quantum-AI Parkinson's Disease Diagnosis Optimizer</h1>
+      <p>Enter clinical symptom metrics and an optional brain MRI scan. Our quantum-classical hybrid model synthesizes angle-embedded quantum state representations with classical tree ensembles for precision screening.</p>
+      <div class="hero-stats">
+        <div><span class="num" id="stat-samples">2,105</span><span class="lbl">Patient records</span></div>
+        <div><span class="num">4</span><span class="lbl">Qubits</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="login-form-side">
+    <div class="login-card">
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tab-signin" type="button">Sign in</button>
+        <button class="auth-tab" id="tab-register" type="button">Register</button>
+      </div>
+
+      <!-- Role Selector -->
+      <div class="role-selector-wrap">
+        <span class="role-label">Portal Account Type:</span>
+        <div class="role-tabs">
+          <button class="role-tab active" id="role-doctor-btn" type="button" data-role="doctor">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            Doctor / Clinician
+          </button>
+          <button class="role-tab" id="role-patient-btn" type="button" data-role="patient">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Patient
+          </button>
+        </div>
+      </div>
+
+      <!-- Sign in Form -->
+      <form id="signin-form">
+        <h2 id="signin-heading">Doctor sign in</h2>
+        <p class="sub" id="signin-sub">Sign in with your credentials.</p>
+        <div id="login-error" class="login-error hidden"></div>
+        <div class="field-group">
+          <label for="login-email">Email Address</label>
+          <input type="email" id="login-email" autocomplete="username" placeholder="doctor@hospital.org" required />
+        </div>
+        <div class="field-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" autocomplete="current-password" placeholder="••••••••" required />
+        </div>
+        <button class="btn-primary" type="submit" id="signin-btn">Sign in</button>
+      </form>
+
+      <!-- Register Form -->
+      <form id="register-form" class="hidden">
+        <h2 id="register-heading">Create a doctor account</h2>
+        <p class="sub" id="register-sub">Credentials are encrypted and stored securely.</p>
+        <div id="register-error" class="login-error hidden"></div>
+        <div class="field-group">
+          <label for="reg-name" id="reg-name-label">Full Name</label>
+          <input type="text" id="reg-name" autocomplete="name" placeholder="Dr. Jane Smith" required />
+        </div>
+        <div class="field-group" id="reg-hospital-wrap">
+          <label for="reg-hospital" id="reg-hospital-label">Hospital / Clinic Affiliation <span style="text-transform:none; opacity:0.7;">(optional)</span></label>
+          <input type="text" id="reg-hospital" autocomplete="organization" placeholder="e.g. Metro Neurology Center" />
+        </div>
+        <div class="field-group">
+          <label for="reg-email">Email Address</label>
+          <input type="email" id="reg-email" autocomplete="username" placeholder="name@domain.com" required />
+        </div>
+        <div class="field-group">
+          <label for="reg-password">Password <span style="text-transform:none; opacity:0.7;">(min 8 characters)</span></label>
+          <input type="password" id="reg-password" minlength="8" autocomplete="new-password" placeholder="••••••••" required />
+        </div>
+        <button class="btn-primary" type="submit" id="register-btn">Create Account</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ============ DASHBOARD ============ -->
+<div id="view-dashboard" class="app-shell hidden">
+  <div class="topbar">
+    <div class="brand-mark"><span class="dot"></span>NeuroQ Diagnostics</div>
+    <div class="topbar-actions">
+      <button class="btn-benchmark-toggle" id="benchmarks-btn" type="button">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:6px;"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        Model Benchmarks
+      </button>
+    </div>
+    <div class="doctor-info">
+      <div>
+        <div class="name" id="doctor-name">&mdash;</div>
+        <div class="role" id="user-role-badge">Attending Physician</div>
+      </div>
+      <div class="doctor-avatar" id="doctor-avatar">DR</div>
+      <button class="btn-secondary" id="logout-btn">Sign out</button>
+    </div>
+  </div>
+
+  <div class="main-grid">
+    <div class="form-column">
+      <h2 class="panel-title" id="panel-title-text">New patient assessment</h2>
+      <p class="panel-sub" id="panel-sub-text">Fill in the fields below from the clinical exam and history.</p>
+
+      <div class="patient-id-row">
+        <div class="field-group">
+          <label for="patient-name">Patient Name / Record ID</label>
+          <input type="text" id="patient-name" placeholder="e.g. Patient #4471" />
+        </div>
+      </div>
+
+      <div class="range-field hybrid-weight-field" id="quantum-weight-wrap">
+        <div class="range-label"><span>Quantum model weight (within each hybrid score)</span><span class="val" id="quantum-weight-val">0.50</span></div>
+        <input type="range" id="quantum-weight" min="0" max="1" step="0.05" value="0.5" />
+        <div class="field-hint" id="hybrid-model-names">Blends classical ML with quantum kernel SVM. 0 = Classical only, 0.20 = Learned Stacking Optimum, 1.0 = Quantum only.</div>
+      </div>
+
+      <div id="form-sections"></div>
+
+      <h3 style="font-size:0.92rem; margin: 1.4rem 0 0.6rem;">Brain MRI scan (optional — multimodal hybrid fusion)</h3>
+      <div class="upload-zone" id="upload-zone">
+        <input type="file" id="mri-input" accept="image/*,.dcm" />
+        <span id="upload-label">Click to attach an MRI scan (.png, .jpg, .dcm), or drag file here</span>
+      </div>
+      <div class="range-field mri-weight-field hidden" id="mri-weight-wrap">
+        <div class="range-label"><span>MRI weight in final score</span><span class="val" id="mri-weight-val">0.50</span></div>
+        <input type="range" id="mri-weight" min="0" max="1" step="0.05" value="0.5" />
+        <div class="field-hint">0 = clinical symptoms only, 1 = MRI imaging only. Default 0.5 balances multimodal clinical & imaging predictions.</div>
+      </div>
+
+      <div class="run-btn-row">
+        <button class="btn-primary" id="run-btn" style="width:auto; padding:0.75rem 1.8rem;">Run Hybrid Diagnosis</button>
+        <span id="form-error" class="login-error hidden" style="margin:0;"></span>
+      </div>
+    </div>
+
+    <div class="results-panel" id="results-panel">
+      <div class="results-empty" id="results-empty">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="22" stroke="#22375a" stroke-width="2"/>
+          <path d="M16 24h4l3 8 6-16 3 8h4" stroke="#4fd8c4" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p>Complete clinical inputs and run assessment<br/>to generate the hybrid diagnostic report.</p>
+      </div>
+
+      <div class="results-loading hidden" id="results-loading">
+        <svg class="qubit-loader" viewBox="0 0 100 100">
+          <g class="link">
+            <line x1="50" y1="15" x2="20" y2="55"/>
+            <line x1="50" y1="15" x2="80" y2="55"/>
+            <line x1="20" y1="55" x2="50" y2="85"/>
+            <line x1="80" y1="55" x2="50" y2="85"/>
+            <line x1="20" y1="55" x2="80" y2="55"/>
+          </g>
+          <circle class="node" cx="50" cy="15" r="5" style="animation-delay:0s"/>
+          <circle class="node" cx="20" cy="55" r="5" style="animation-delay:0.2s"/>
+          <circle class="node" cx="80" cy="55" r="5" style="animation-delay:0.4s"/>
+          <circle class="node" cx="50" cy="85" r="5" style="animation-delay:0.6s"/>
+        </svg>
+        <div class="status-text" id="loading-status">Simulating quantum kernel state...</div>
+      </div>
+
+      <div class="results-content hidden" id="results-content"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODEL BENCHMARKS MODAL ============ -->
+<div id="benchmark-modal" class="modal-backdrop hidden">
+  <div class="modal-card">
+    <div class="modal-header">
+      <div>
+        <h2>Algorithm Performance Benchmarks</h2>
+        <p class="sub">Verified test-set evaluation: Classical baselines vs Quantum circuits vs Hybrid Stacking.</p>
+      </div>
+      <button class="modal-close" id="benchmark-close">&times;</button>
+    </div>
+    <div class="modal-body" id="benchmark-content">
+      <div style="text-align:center; padding:2rem; color:var(--text-muted);">Loading benchmark telemetry...</div>
+    </div>
+  </div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

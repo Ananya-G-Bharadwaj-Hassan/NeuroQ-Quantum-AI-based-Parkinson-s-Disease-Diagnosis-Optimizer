@@ -1,0 +1,153 @@
+{
+  "dataset": "progression",
+  "n_samples": 500,
+  "models": {
+    "logistic_regression": {
+      "accuracy": 0.312,
+      "precision": 0.29394612794612796,
+      "recall": 0.312,
+      "f1": 0.29351494659531113,
+      "confusion_matrix": [
+        [
+          8,
+          9,
+          22
+        ],
+        [
+          14,
+          7,
+          20
+        ],
+        [
+          10,
+          11,
+          24
+        ]
+      ],
+      "labels": [
+        0,
+        1,
+        2
+      ],
+      "train_time_sec": 0.00564265251159668
+    },
+    "random_forest": {
+      "accuracy": 0.36,
+      "precision": 0.35506862745098033,
+      "recall": 0.36,
+      "f1": 0.3560379263533005,
+      "confusion_matrix": [
+        [
+          10,
+          13,
+          16
+        ],
+        [
+          13,
+          14,
+          14
+        ],
+        [
+          9,
+          15,
+          21
+        ]
+      ],
+      "labels": [
+        0,
+        1,
+        2
+      ],
+      "train_time_sec": 0.342212438583374
+    },
+    "xgboost": {
+      "accuracy": 0.336,
+      "precision": 0.34085585585585587,
+      "recall": 0.336,
+      "f1": 0.3372467387901346,
+      "confusion_matrix": [
+        [
+          12,
+          18,
+          9
+        ],
+        [
+          12,
+          14,
+          15
+        ],
+        [
+          13,
+          16,
+          16
+        ]
+      ],
+      "labels": [
+        0,
+        1,
+        2
+      ],
+      "train_time_sec": 0.20286226272583008
+    },
+    "quantum_kernel_svm": {
+      "accuracy": 0.328,
+      "precision": 0.31720736434108526,
+      "recall": 0.328,
+      "f1": 0.3093912763560277,
+      "confusion_matrix": [
+        [
+          5,
+          11,
+          23
+        ],
+        [
+          8,
+          14,
+          19
+        ],
+        [
+          5,
+          18,
+          22
+        ]
+      ],
+      "labels": [
+        0,
+        1,
+        2
+      ],
+      "train_time_sec": 0.0518190860748291,
+      "n_samples_used": 500
+    },
+    "hybrid_model": {
+      "accuracy": 0.336,
+      "precision": 0.3268589898989899,
+      "recall": 0.336,
+      "f1": 0.3262406976744186,
+      "confusion_matrix": [
+        [
+          7,
+          15,
+          17
+        ],
+        [
+          10,
+          14,
+          17
+        ],
+        [
+          8,
+          16,
+          21
+        ]
+      ],
+      "labels": [
+        0,
+        1,
+        2
+      ],
+      "train_time_sec": 0.03844952583312988,
+      "strategy": "soft_voting_ensemble"
+    }
+  }
+}

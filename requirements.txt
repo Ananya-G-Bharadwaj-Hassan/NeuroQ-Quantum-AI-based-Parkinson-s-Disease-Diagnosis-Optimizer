@@ -1,0 +1,15 @@
+pandas
+numpy
+scikit-learn
+pennylane
+pydicom
+librosa
+soundfile
+xgboost
+joblib
+Pillow
+flask
+scikit-image
+pymongo
+dnspython
+gunicorn

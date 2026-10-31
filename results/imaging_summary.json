@@ -1,0 +1,119 @@
+{
+  "dataset": "imaging",
+  "n_samples": 413,
+  "note": "No diagnosis label available in these DICOMs; scores are unsupervised anomaly scores, not predictions.",
+  "feature_names": [
+    "mean_intensity",
+    "std_intensity",
+    "skew_intensity",
+    "kurtosis_intensity",
+    "p10",
+    "p90",
+    "contrast",
+    "homogeneity",
+    "energy",
+    "correlation"
+  ],
+  "top_anomalous_scans": [
+    {
+      "patient_id": "101492",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_101492_MR_rsfMRI_RL__br_raw_20210916224845964_1_S1063557_I1493084.dcm",
+      "anomaly_score": 0.7970605644188146
+    },
+    {
+      "patient_id": "101492",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_101492_MR_rsfMRI_RL__br_raw_20210916224845964_1_S1063557_I1493084(1).dcm",
+      "anomaly_score": 0.7970605644188146
+    },
+    {
+      "patient_id": "160890",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_160890_MR_rsfMRI_RL__br_raw_20220929171534482_221_S1161815_I1624166.dcm",
+      "anomaly_score": 0.7151273957079108
+    },
+    {
+      "patient_id": "103542",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_103542_MR_rsfMRI_LR__br_raw_20220106125623368_8_S1093544_I1530517.dcm",
+      "anomaly_score": 0.7025375645820648
+    },
+    {
+      "patient_id": "3130",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_3130_MR_ep2d_RESTING_STATE_br_raw_20130124103810890_137_S180778_I355962.dcm",
+      "anomaly_score": 0.6932233059157223
+    },
+    {
+      "patient_id": "101179",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_101179_MR_2D_GRE_MT__br_raw_20220419213501029_1_S1126241_I1571517.dcm",
+      "anomaly_score": 0.6886423132090158
+    },
+    {
+      "patient_id": "103542",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_103542_MR_rsfMRI_LR__br_raw_20220106125148939_10_S1093544_I1530517.dcm",
+      "anomaly_score": 0.6884214912909037
+    },
+    {
+      "patient_id": "103542",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_103542_MR_rsfMRI_LR__br_raw_20220106125408351_5_S1093544_I1530517.dcm",
+      "anomaly_score": 0.6713472419966983
+    },
+    {
+      "patient_id": "103542",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_103542_MR_rsfMRI_LR__br_raw_20220106125045401_2_S1093544_I1530517.dcm",
+      "anomaly_score": 0.6697217637686816
+    },
+    {
+      "patient_id": "103542",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_103542_MR_rsfMRI_LR__br_raw_20220106125656584_7_S1093544_I1530517.dcm",
+      "anomaly_score": 0.6468831088804711
+    },
+    {
+      "patient_id": "160890",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_160890_MR_rsfMRI_RL__br_raw_20220929171512204_220_S1161815_I1624166.dcm",
+      "anomaly_score": 0.6391885902702592
+    },
+    {
+      "patient_id": "160890",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_160890_MR_rsfMRI_RL__br_raw_20220929171456998_133_S1161815_I1624166.dcm",
+      "anomaly_score": 0.6385735302081611
+    },
+    {
+      "patient_id": "103542",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_103542_MR_rsfMRI_LR__br_raw_20220106125530278_6_S1093544_I1530517.dcm",
+      "anomaly_score": 0.6351319118654524
+    },
+    {
+      "patient_id": "103542",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_103542_MR_rsfMRI_LR__br_raw_20220106125115042_9_S1093544_I1530517.dcm",
+      "anomaly_score": 0.6305488379183115
+    },
+    {
+      "patient_id": "103542",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_103542_MR_rsfMRI_LR__br_raw_20220106125221532_1_S1093544_I1530517.dcm",
+      "anomaly_score": 0.6301405656731541
+    },
+    {
+      "patient_id": "103542",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_103542_MR_rsfMRI_LR__br_raw_20220106125334433_3_S1093544_I1530517.dcm",
+      "anomaly_score": 0.6280224174142863
+    },
+    {
+      "patient_id": "103542",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_103542_MR_rsfMRI_LR__br_raw_20220106125326376_4_S1093544_I1530517.dcm",
+      "anomaly_score": 0.6253080755502055
+    },
+    {
+      "patient_id": "160890",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_160890_MR_rsfMRI_RL__br_raw_20220929171553364_200_S1161815_I1624166.dcm",
+      "anomaly_score": 0.6231479807347198
+    },
+    {
+      "patient_id": "160890",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_160890_MR_rsfMRI_RL__br_raw_20220929171512470_53_S1161815_I1624166.dcm",
+      "anomaly_score": 0.5814869370896458
+    },
+    {
+      "patient_id": "160890",
+      "file": "/home/claude/quantum_parkinsons/data/photo_raw/archive (3)/DCM_Images-20231213T092329Z-001/DCM_Images/PPMI_160890_MR_rsfMRI_RL__br_raw_20220929171544232_208_S1161815_I1624166.dcm",
+      "anomaly_score": 0.5791239635776352
+    }
+  ]
+}
