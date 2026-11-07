@@ -23,10 +23,6 @@ from sklearn.svm import SVC
 
 from . import config
 
-
-# ------------------------------------------------------------------ #
-# 1. Quantum Kernel SVM
-# ------------------------------------------------------------------ #
 class QuantumKernelSVM:
     def __init__(self, n_qubits=config.N_QUBITS, c=1.0, random_state=config.RANDOM_STATE):
         self.n_qubits = n_qubits
