@@ -1,6 +1,14 @@
+# Environment secrets (NEVER commit this)
 .env
+.env.local
+.env.*.local
+
+# Local SQLite / secret keys / sessions
 instance/
-instance/secret.key
-instance/doctors.db
+instance/*.db
+instance/*.key
+
+# Python artifacts
 __pycache__/
+*.pyc
 venv/
